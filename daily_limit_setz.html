@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Limit</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.body.innerText = "daily_limit: 100";
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Limit JSON</title>
 </head>
-<body></body>
+<body>
+  <script>
+    // Set the daily limit value
+    const dailyLimit = 15; // You can change this value as needed
+
+    // Create a JSON response
+    const response = {
+      limit: dailyLimit
+    };
+
+    // Set the content type to JSON
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+
+    // Send the JSON response
+    new Response(JSON.stringify(response), { headers }).text().then((body) => {
+      document.body.textContent = body; // Display the JSON for debugging
+    });
+  </script>
+</body>
 </html>
