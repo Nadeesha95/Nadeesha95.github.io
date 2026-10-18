@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Auto-Dub – Dub &amp; Translate YouTube in 100+ Languages</title>
+  <meta name="description" content="Free Chrome extension to dub and translate YouTube videos in real time: voice dubbing and subtitles in 100+ languages incl. Sinhala, Tamil, Hindi.">
+  <meta name="keywords" content="YouTube auto dub, YouTube dubbing extension, YouTube translator, translate YouTube videos, YouTube subtitles translator, Sinhala subtitles, Tamil subtitles, Hindi dubbing, AI voice dubbing, Chrome extension">
+  <meta name="author" content="Nadeesha Sahen Weerasekara">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://nadeesha95.github.io/youtube-auto-dub/">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nadeesha Weerasekara">
+  <meta property="og:title" content="YouTube Auto-Dub – Watch any YouTube video in your language">
+  <meta property="og:description" content="Real-time voice dubbing and translated subtitles for YouTube in 100+ languages, including Sinhala, Tamil and Hindi. Free Chrome extension.">
+  <meta property="og:url" content="https://nadeesha95.github.io/youtube-auto-dub/">
+  <meta property="og:image" content="https://nadeesha95.github.io/youtube-auto-dub/images/youtube-auto-dub-100-language-subtitles-banner.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="560">
+  <meta property="og:image:alt" content="YouTube Auto-Dub extension showing translated subtitles and voice dubbing in 100 languages">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Nadeesha_sahen">
+  <meta name="twitter:title" content="YouTube Auto-Dub – Watch any YouTube video in your language">
+  <meta name="twitter:description" content="Real-time voice dubbing and translated subtitles for YouTube in 100+ languages. Free Chrome extension.">
+  <meta name="twitter:image" content="https://nadeesha95.github.io/youtube-auto-dub/images/youtube-auto-dub-100-language-subtitles-banner.jpg">
+
+  <link rel="icon" type="image/png" href="images/youtube-auto-dub-icon.png">
+  <link rel="apple-touch-icon" href="images/youtube-auto-dub-icon.png">
+  <meta name="theme-color" content="#0b0f19">
+  <link rel="preload" as="image" href="images/youtube-auto-dub-100-language-subtitles-banner.jpg">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data: the extension -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "YouTube Auto-Dub & 100 Language Subtitles",
+    "applicationCategory": "BrowserApplication",
+    "applicationSubCategory": "Browser extension",
+    "operatingSystem": "Google Chrome, Microsoft Edge, Brave",
+    "description": "Chrome extension that dubs and translates YouTube videos in real time, with voice dubbing and translated subtitles in 100+ languages including Sinhala, Tamil and Hindi.",
+    "url": "https://nadeesha95.github.io/youtube-auto-dub/",
+    "image": "https://nadeesha95.github.io/youtube-auto-dub/images/youtube-auto-dub-100-language-subtitles-banner.jpg",
+    "screenshot": [
+      "https://nadeesha95.github.io/youtube-auto-dub/images/youtube-hindi-dubbing-translated-subtitles.jpg",
+      "https://nadeesha95.github.io/youtube-auto-dub/images/youtube-tamil-dubbing-subtitles.jpg",
+      "https://nadeesha95.github.io/youtube-auto-dub/images/youtube-english-subtitles-auto-dub-popup.jpg"
+    ],
+    "softwareVersion": "2.2.0",
+    "inLanguage": "en",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": {
+      "@type": "Person",
+      "name": "Nadeesha Sahen Weerasekara",
+      "url": "https://nadeesha95.github.io/index.html"
+    },
+    "featureList": [
+      "Real-time voice dubbing for YouTube videos",
+      "Translated and bilingual subtitles",
+      "100+ languages including Sinhala, Tamil and Hindi",
+      "Smart simplify for fast speech",
+      "Smooth original-audio ducking"
+    ]
+  }
+  </script>
+  <!-- Structured data: FAQ (mirrors the FAQ section below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is YouTube Auto-Dub free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. YouTube Auto-Dub is free to install and use, with no account or sign-up." } },
+      { "@type": "Question", "name": "Which languages are supported?",
+        "acceptedAnswer": { "@type": "Answer", "text": "More than 100 languages, including Sinhala, Tamil, Hindi, Bengali, English, Spanish, Arabic, Chinese, French, German and many more." } },
+      { "@type": "Question", "name": "Does the video need captions?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The extension translates the video's captions, including YouTube's automatic captions. It switches captions on for you if needed. Videos without any captions cannot be dubbed." } },
+      { "@type": "Question", "name": "Does it work in Microsoft Edge and Brave?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. It works in Google Chrome and in Chromium-based browsers such as Microsoft Edge and Brave." } },
+      { "@type": "Question", "name": "Does the extension collect my data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Your settings stay on your device. Only the caption text of the video you are watching is sent to Google Translate to translate it and create the voice. Nothing is sent to the developer." } },
+      { "@type": "Question", "name": "Why does the voice sometimes speak faster or say a shorter sentence?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Some languages take longer to say than the original. To stay in sync, the voice speeds up slightly and, with Smart simplify on, says a shorter version of long sentences. Subtitles always show the full translation." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="YouTube Auto-Dub home">
+        <img src="images/youtube-auto-dub-icon.png" alt="" width="34" height="34">
+        YouTube Auto-Dub
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a class="nav-dev" href="../index.html">Developer ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Free Chrome extension · 100+ languages</span>
+        <h1>Watch any YouTube video <span>in your language</span></h1>
+        <p class="lead">
+          YouTube Auto-Dub translates YouTube videos as you watch, with natural voice dubbing and
+          translated subtitles in Sinhala, Tamil, Hindi and 100+ other languages.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/search/YouTube%20Auto-Dub" target="_blank" rel="noopener">Add to Chrome – it's free</a>
+          <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
+        </div>
+        <p class="hero-note">Works in Google Chrome, Microsoft Edge and Brave · No sign-up</p>
+        <div class="hero-image">
+          <img src="images/youtube-auto-dub-100-language-subtitles-banner.jpg"
+               alt="YouTube Auto-Dub showing a YouTube video with English and Hindi subtitles, the extension popup and a list of supported languages"
+               width="1400" height="560" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Everything you need to understand any video</h2>
+          <p>Turn on subtitles, dubbing, or both. Everything works automatically once a video starts.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🎙️</div>
+            <h3>Real-time voice dubbing</h3>
+            <p>Hear the video in your language. Each line is prepared ahead of time and spoken exactly when it is said in the video.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">💬</div>
+            <h3>Translated subtitles</h3>
+            <p>Clear subtitles on the video in your language, or bilingual mode with the original line underneath for learning.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🌐</div>
+            <h3>100+ languages</h3>
+            <p>Sinhala, Tamil, Hindi, Bengali, Arabic, Chinese, Spanish and many more, with natural voices even for languages your computer has no voice for.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3>Smart simplify for fast speech</h3>
+            <p>When a sentence is too long for the gap, the voice speeds up a little or says a shorter version, so the dub never falls behind.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🔊</div>
+            <h3>Smooth volume control</h3>
+            <p>The original audio fades down while the dub speaks and comes back between lines. You choose both volumes.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3>Private and free</h3>
+            <p>No account, no tracking. Your settings stay on your device. <a href="privacy-policy.html">Read the privacy policy</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How to dub a YouTube video in 3 steps</h2>
+          <p>No setup or account needed.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Add the extension</h3>
+            <p>Install YouTube Auto-Dub from the Chrome Web Store. Subtitles and dubbing are on by default.</p>
+          </li>
+          <li>
+            <h3>Choose your language</h3>
+            <p>Click the extension icon and pick your language, for example Sinhala, Tamil or Hindi.</p>
+          </li>
+          <li>
+            <h3>Play any video</h3>
+            <p>Open a YouTube video with captions. The translated subtitles and voice start automatically.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>See it in action</h2>
+          <p>Real screenshots of YouTube Auto-Dub on YouTube videos.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <a href="images/youtube-hindi-dubbing-translated-subtitles.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-hindi-dubbing-translated-subtitles.jpg" loading="lazy" width="1280" height="800"
+                   alt="English YouTube podcast dubbed into Hindi with bilingual subtitles and the YouTube Auto-Dub popup open">
+            </a>
+            <figcaption><strong>Hindi dubbing</strong> – an English podcast with Hindi voice and bilingual subtitles.</figcaption>
+          </figure>
+          <figure>
+            <a href="images/youtube-tamil-dubbing-subtitles.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-tamil-dubbing-subtitles.jpg" loading="lazy" width="1280" height="800"
+                   alt="YouTube video translated into Tamil subtitles with Tamil voice dubbing">
+            </a>
+            <figcaption><strong>Tamil dubbing</strong> – translated Tamil subtitles synced to the full transcript.</figcaption>
+          </figure>
+          <figure>
+            <a href="images/youtube-video-hindi-subtitles-bilingual.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-video-hindi-subtitles-bilingual.jpg" loading="lazy" width="1280" height="800"
+                   alt="YouTube travel video with Hindi translated subtitles shown over the player">
+            </a>
+            <figcaption><strong>Clean subtitles</strong> – easy-to-read translated captions on any video.</figcaption>
+          </figure>
+          <figure>
+            <a href="images/youtube-english-subtitles-auto-dub-popup.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-english-subtitles-auto-dub-popup.jpg" loading="lazy" width="1280" height="800"
+                   alt="YouTube Auto-Dub popup with subtitles and auto dub switches and the language list">
+            </a>
+            <figcaption><strong>Simple controls</strong> – two switches and a searchable list of 100+ languages.</figcaption>
+          </figure>
+          <figure>
+            <a href="images/youtube-chinese-to-english-translation-settings.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-chinese-to-english-translation-settings.jpg" loading="lazy" width="1280" height="800"
+                   alt="Chinese YouTube video translated to English with volume, speed and voice settings">
+            </a>
+            <figcaption><strong>Any source language</strong> – a Chinese video translated to English, with volume and speed settings.</figcaption>
+          </figure>
+          <figure>
+            <a href="images/youtube-auto-dub-extension-preview.jpg" target="_blank" rel="noopener">
+              <img src="images/youtube-auto-dub-extension-preview.jpg" loading="lazy" width="440" height="280"
+                   alt="YouTube Auto-Dub extension preview with translated subtitles playing">
+            </a>
+            <figcaption><strong>At a glance</strong> – subtitles playing with the extension ready.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Translate YouTube into 100+ languages</h2>
+          <p>Including the languages most YouTube tools leave out.</p>
+        </div>
+        <ul class="lang-cloud">
+          <li class="hl">Sinhala · සිංහල</li>
+          <li class="hl">Tamil · தமிழ்</li>
+          <li class="hl">Hindi · हिन्दी</li>
+          <li>Bengali · বাংলা</li>
+          <li>English</li>
+          <li>Spanish</li>
+          <li>Arabic · العربية</li>
+          <li>Chinese · 中文</li>
+          <li>French</li>
+          <li>German</li>
+          <li>Portuguese</li>
+          <li>Russian</li>
+          <li>Japanese · 日本語</li>
+          <li>Korean · 한국어</li>
+          <li>Urdu · اردو</li>
+          <li>Telugu · తెలుగు</li>
+          <li>Malayalam · മലയാളം</li>
+          <li>Kannada · ಕನ್ನಡ</li>
+          <li>Marathi · मराठी</li>
+          <li>Gujarati · ગુજરાતી</li>
+          <li>Punjabi · ਪੰਜਾਬੀ</li>
+          <li>Nepali · नेपाली</li>
+          <li>Indonesian</li>
+          <li>Vietnamese</li>
+          <li>Thai · ไทย</li>
+          <li>Turkish</li>
+          <li>Italian</li>
+          <li>and 70+ more</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is YouTube Auto-Dub free?</summary>
+            <p>Yes. YouTube Auto-Dub is free to install and use, with no account or sign-up.</p>
+          </details>
+          <details>
+            <summary>Which languages are supported?</summary>
+            <p>More than 100 languages, including Sinhala, Tamil, Hindi, Bengali, English, Spanish, Arabic, Chinese, French, German and many more.</p>
+          </details>
+          <details>
+            <summary>Does the video need captions?</summary>
+            <p>Yes. The extension translates the video's captions, including YouTube's automatic captions. It switches captions on for you if needed. Videos without any captions cannot be dubbed.</p>
+          </details>
+          <details>
+            <summary>Does it work in Microsoft Edge and Brave?</summary>
+            <p>Yes. It works in Google Chrome and in Chromium-based browsers such as Microsoft Edge and Brave.</p>
+          </details>
+          <details>
+            <summary>Does the extension collect my data?</summary>
+            <p>No. Your settings stay on your device. Only the caption text of the video you are watching is sent to Google Translate to translate it and create the voice. Nothing is sent to the developer. See the <a href="privacy-policy.html">privacy policy</a>.</p>
+          </details>
+          <details>
+            <summary>Why does the voice sometimes speak faster or say a shorter sentence?</summary>
+            <p>Some languages take longer to say than the original. To stay in sync, the voice speeds up slightly and, with Smart simplify on, says a shorter version of long sentences. Subtitles always show the full translation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Break the language barrier on YouTube</h2>
+        <p>Install YouTube Auto-Dub and start watching videos in your own language today.</p>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/search/YouTube%20Auto-Dub" target="_blank" rel="noopener">Add to Chrome – it's free</a>
+      </div>
+    </section>
+
+    <!-- Developer -->
+    <section id="developer">
+      <div class="wrap">
+        <div class="developer">
+          <div>
+            <h2>Made by Nadeesha Sahen Weerasekara</h2>
+            <p>Senior Software Engineer in Colombo, Sri Lanka. Questions or ideas? <a href="mailto:nadeesha.weerasekara95@gmail.com">nadeesha.weerasekara95@gmail.com</a></p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-ghost" href="../index.html">View developer profile ↗</a>
+            <a class="coffee" href="https://buymeacoffee.com/nadeesha95" target="_blank" rel="noopener" title="Support this free extension">
+              <img src="../Nadeesha%20weerasekara%20portfolio_files/buymecoffie.png" alt="Buy me a coffee" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Nadeesha Sahen Weerasekara · YouTube Auto-Dub</span>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="../index.html">Developer</a>
+        <a href="https://github.com/Nadeesha95" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/nadeesha-sahen-weerasekara-6b4378151" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:nadeesha.weerasekara95@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
