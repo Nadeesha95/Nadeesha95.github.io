@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /daily_limit_setz.html
+Disallow: /limit.json
+
+Sitemap: https://nadeesha95.github.io/sitemap.xml
